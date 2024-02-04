@@ -1,4 +1,4 @@
-const apiKey = 'ab9f684b019604be53450b7727a65309';
+const apiKey = 'a';
 const searchInput = document.getElementById('searchInput');
 const weatherContainer = document.getElementById('weatherContainer');
 

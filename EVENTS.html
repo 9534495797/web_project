@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: antiquewhite;
+
+}
+#bc{
+    border: 2px solid red;
+    border-style: none;
+text-align: center;
+margin-top: 400px;
+margin-left: 1000px;
+display: flexbox;
+background-color: aquamarine;
+display:inline-table;
+            box-sizing: border-box;
+            
+}
+#a{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+#at{
+    color: red;
+}
+#bt{
+    color: red;
+}
+
+</style>
+<body>
+    <form id="bc">
+        <label><b>NAME</b></label>
+        <input type="text" required placeholder="full name" id="a" onfocus="validation()"><br><br>
+        <!-- <span id="at"></span><br> -->
+        <label><b>E-MAIL</b></label>
+        <input type="email"  required id="b" placeholder="email" onfocus="validation1()"><br><br>
+        <span id="bt"></span>
+        <label><b>PAASWORD</b></label>
+        <input type="password" id="c" required onfocus="validation2()"><br><br>
+        <textarea id="n">WRITE YOUR TEXT HERE>>></textarea><br>
+        <input type="text" onfocus="validation3()">
+           <input type="button" value="submit"  >
+           <script>
+           function validation(){
+               
+                document.getElementById("a").style.backgroundColor="skyblue";
+                    
+                
+            }
+            function validation1(){
+               
+               document.getElementById("b").style.backgroundColor="pink";
+                   
+               
+           }
+           function validation2(){
+               
+               document.getElementById("c").style.backgroundColor="lightgreen";
+                   
+               
+           }
+           function validation3(){
+               
+               document.getElementById("n").style.backgroundColor="pink";
+                   
+               
+           }
+          </script>
+    </form>
+</body>
+</html>

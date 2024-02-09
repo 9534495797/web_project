@@ -1,0 +1,139 @@
+<!-- it is for onkeydown onkeyup and onkeypress -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: antiquewhite;
+
+}
+#bc{
+    border: 2px solid red;
+    border-style: none;
+text-align: center;
+margin-top: 400px;
+margin-left: 1000px;
+display: flexbox;
+background-color: aquamarine;
+display:inline-table;
+            box-sizing: border-box;
+            
+}
+#a{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+#at{
+    color: red;
+}
+#bt{
+    color: red;
+}
+
+</style>
+<body>
+    <form id="bc">
+        <label><b>NAME</b></label>
+        <input type="text" required placeholder="full name" id="a" onkeydown="key()" ><br><br>
+         <span id="at"></span><br> -->
+        <!-- <label><b>E-MAIL</b></label>
+        <input type="email"  required id="b" placeholder="email" onkeyup="key()" ><br><br>
+        <span id="bt"></span>
+        <label><b>PAASWORD</b></label>
+        <input type="password" id="c" required onkeypress="key()"><br><br>
+        <textarea id="n">WRITE YOUR TEXT HERE>>></textarea><br>
+        <input type="text" >
+           <input type="button" value="submit"  >
+          
+           <script>
+           function key(){
+            alert("keyboard event occur");
+           }
+          </script>
+    </form>
+</body>
+</html> --> 
+
+
+
+<!-- IT IS FOR MOUSE EVEENT
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: antiquewhite;
+
+}
+#kc{
+    border: 2px solid red;
+    border-style: none;
+text-align: center;
+margin-top: 400px;
+margin-left: 1000px;
+display: flexbox;
+background-color: aquamarine;
+display:inline-table;
+            box-sizing: border-box;
+            
+}
+#a{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+#at{
+    color: red;
+}
+#bt{
+    color: red;
+}
+
+</style>
+<body>
+    <form id="kc">
+        <label><b>NAME</b></label>
+        <input type="text" required placeholder="full name" id="a"  ><br><br>
+        <!-- <span id="at"></span><br> -->
+        <label><b>E-MAIL</b></label>
+        <input type="email"  required id="b" placeholder="email"  ><br><br>
+        <span id="bt"></span>
+        <label><b>PAASWORD</b></label>
+        <input type="password" id="c" required ><br><br>
+        <textarea id="n">WRITE YOUR TEXT HERE>>></textarea><br>
+       
+           <input type="button" value="submit"  id="bc"
+           onmouseover="changecolormouseover()"
+           onmouseout="changecolormouseout()"
+           >
+           
+           <script>
+         function changecolormouseover(){
+            document.getElementById("bc").style.background="red";
+            document.getElementById("bc").style.color="pink";
+            document.getElementById("bc").style.transform='rotate(360deg) scale(1.5)';
+            document.getElementById("bc").style.transition='2s';
+ 
+         }
+         function changecolormouseout(){
+            document.getElementById("bc").style.background="blue";
+            document.getElementById("bc").style.color="white";
+            document.getElementById("bc").style.transform='rotate(-360deg) scale(1)';
+            document.getElementById("bc").style.transition='2s';
+         }
+          </script>
+    </form>
+</body>
+</html>

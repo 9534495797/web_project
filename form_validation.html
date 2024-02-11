@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: antiquewhite;
+
+}
+#bc{
+    border: 2px solid red;
+    border-style: none;
+text-align: center;
+margin-top: 400px;
+margin-left: 1000px;
+display: flexbox;
+background-color: aquamarine;
+display:inline-table;
+            box-sizing: border-box;
+            
+}
+#a{
+    padding-left: 0px;
+    margin-left: 0px;
+}
+#at{
+    color: red;
+}
+#bt{
+    color: red;
+}
+</style>
+<body>
+    <form id="bc">
+        <label><b>NAME</b></label>
+        <input type="text" required placeholder="full name" id="a"><br><br>
+        <span id="at"></span><br>
+        <label><b>E-MAIL</b></label>
+        <input type="email"  required id="b" placeholder="email"><br><br>
+        <span id="bt"></span>
+        <label><b>PAASWORD</b></label>
+        <input type="password" id="c" required><br><br>
+        <textarea>WRITE YOUR TEXT HERE>>></textarea><br>
+           <input type="button" value="submit" onclick="validation()" >
+           <script>
+           function validation(){
+                var name = document.getElementById("a").value;
+                var email = document.getElementById("b").value;
+                
+                if(name == ""){
+                    document.getElementById("at").innerHTML = "Name is mandatory";
+                } else {
+                    document.getElementById("at").innerHTML = "";
+                }
+                
+                if(email == ""){
+                    document.getElementById("bt").innerHTML = "Email is mandatory";
+                } else {
+                    document.getElementById("bt").innerHTML = "";
+                }
+            }
+        
+          </script>
+    </form>
+</body>
+</html>

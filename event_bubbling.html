@@ -1,0 +1,94 @@
+<!-- effect of color -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ele{
+        border: 20px solid;
+        padding: 50px;
+    }
+</style>
+<body>
+
+    <form id="myform" class="ele">
+        <div id="main" class="ele">
+        <p id="p1" class="ele">
+
+        </p>
+    </div>
+    </form>
+    <script>
+        document.getElementById("p1").addEventListener("click",function(){
+            this.style.borderColor='red';
+        });
+        document.getElementById("main").addEventListener("click",function(){
+            this.style.borderColor="green";
+
+        });
+        document.getElementById("ele").addEventListener("click",function(){
+            this.style.borderColor="blue";
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .ele{
+        border: 20px solid;
+        padding: 50px;
+        border-radius: 100%;
+    }
+</style>
+<body>
+
+    <form id="myform" class="ele">
+        <div id="main" class="ele" onclick="changecolormouseout()">
+        <p id="p1" class="ele"onclick="changecolormouseover()" >
+
+        </p>
+    </div>
+    </form>
+    <script>
+        document.getElementById("p1").addEventListener("click",function(){
+            this.style.borderColor='red';
+        });
+        document.getElementById("main").addEventListener("click",function(){
+            this.style.borderColor="green";
+
+        });
+        document.getElementById("ele").addEventListener("click",function(){
+            this.style.borderColor="blue";
+        });
+        function changecolormouseover(){
+            
+            document.getElementById("myform").style.transform='rotate(360deg) scale(0.3)';
+            document.getElementById("myform").style.transition='2s';
+            document.getElementById("myform").style.transition='2s';
+ 
+         }
+         function changecolormouseout(){
+            document.getElementById("myform").style.background="blue";
+            document.getElementById("myform").style.color="white";
+            document.getElementById("myform").style.transform='rotate(-360deg) scale(0.4)';
+            document.getElementById("myform").style.transition='2s';
+         }
+    </script>
+</body>
+</html>

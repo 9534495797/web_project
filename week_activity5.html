@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+  }
+  #timer {
+    font-size: 36px;
+    margin-bottom: 300px;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+<div id="timer">Loading...</div>
+
+<script>
+  // Set the countdown time in minutes and seconds
+  const countdownMinutes = 0;
+  const countdownSeconds = 3;
+
+  // Calculate the total duration in seconds
+  let totalTime = countdownMinutes * 60 + countdownSeconds;
+
+  // Function to update the countdown timer
+  function updateTimer() {
+    const minutes = Math.floor(totalTime / 60);
+    let seconds = totalTime % 60;
+
+    // Add leading zero to seconds if less than 10
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    // Display the remaining time
+    document.getElementById('timer').textContent = `${minutes}:${seconds}`;
+    document.getElementById("timer").style.cssText="font-size: 700px;color:black;font-style:italic";
+
+    // If the timer has reached zero
+    if (totalTime <= 0) {
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = 'Time is up!';
+      document.getElementById("timer").style.cssText="font-size: 200px;color:black;font-style:italic:";
+      document.getElementById("timer").style.transform='rotate(360deg) scale(0.3)';
+            document.getElementById("timer").style.transition='2s';
+    } else {
+      // Decrease the total time by 1 second
+      totalTime--;
+    }
+  }
+
+  // Initial call to updateTimer
+  updateTimer();
+
+  // Update the timer every second
+  const timerInterval = setInterval(updateTimer, 1000);
+</script>
+</body>
+</html>
+
+
+
+

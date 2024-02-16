@@ -1,0 +1,56 @@
+<!-- setinterval() and settimeout() method -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #a{
+        font-size: 60px;
+        background-color:green;
+    }
+    #b{
+        font-size: 60px;
+        background-color: red;
+    }
+</style>
+<body>
+    <button id="a"onclick="ab()">start</button>
+    <button id="b" onclick="stop()">stop</button>
+    <p id="demo"></p>
+    <script>
+        var i;
+        var clickcount=0;
+        function start(){
+            i=setInterval(datetime,5000);
+        }
+        function datetime(){
+            document.getElementById("demo").innerHTML=new Date();
+            document.getElementById("demo").style.cssText="font-size: 70px;color:black;font-style:italic";
+        }
+        function stop(){
+            clearInterval(i);
+        }
+        function timeout(){
+            
+            clickcount++;
+            if(clickcount>=5){
+                document.getElementById("demo").innerHTML="time out";
+                document.getElementById("demo").style.cssText="font-size: 70px;color:black;font-style:italic";
+                // return;
+            }
+        }
+    function ab(){
+        start();
+        timeout();
+    }
+    </script>
+</body>
+</html>
+
+
+
+

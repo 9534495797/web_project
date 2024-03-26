@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#slidedownbutton").click(function(){
+                $("#slideelement").slideDown();
+            })
+            $("#slideupbutton").click(function(){
+                $("#slideelement").slideUp();
+            })
+            $("#slidetogglebutton").click(function(){
+                $("#slideelement").slideToggle();
+            })
+            $("#slidedownbutton " ).mouseenter(function(){
+                $("#slidedownbutton").css("color", "blue");
+            });
+            // Function to handle mouse leave event
+            $("#slidedownbutton" ).mouseleave(function(){
+                $("#slidedownbutton" ).css("color", "green");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="slideelement">
+        <img  height="500px" width="2200px" src="https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg">
+
+    </div>
+    <button id="slidedownbutton">slide down</button>
+    <button id="slideupbutton">slide up</button>
+    <button id="slidetogglebutton">slide toggle</button>
+</body>
+</html>

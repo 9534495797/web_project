@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        /* Your CSS styling goes here */
+        /* Example: */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+            max-width: 6000px;
+        }
+        .completed {
+            text-decoration: line-through;
+        }
+        h1{
+            text-align: center;
+        }
+        .input-container{
+            text-align: center;
+        }
+        #tasklist{
+            text-align: center;
+        }
+        #add{
+            color: rgb(0, 14, 7);
+            text-decoration: double;
+            background-color:white;
+            font-size: large;
+        }
+        /* ... other styles ... */
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="task" placeholder="Add a new task...">
+            <button id="add" ><b>Add</b></button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        // Your jQuery functionality goes here
+        $(document).ready(function() {
+            // Add a new task
+            $('#add').click(function() {
+                const taskText = $('#task').val();
+                if (taskText) {
+                    $('#taskList').append(`<li>${taskText} <button class="close">   DELETE</button></li>`);
+                    $('#task').val('');
+                }
+            });
+
+            // Mark task as completed
+            $(document).on('click', 'li', function() {
+                $(this).toggleClass('completed');
+            });
+
+            // Delete task
+            $(document).on('click', '.close', function() {
+                $(this).parent().remove();
+            });
+            $("#add").mouseenter(function(){
+                $("h1").css("color", "blue");
+            });
+            // Function to handle mouse leave event
+            $("#add").mouseleave(function(){
+                $(".close").css("color", "green");
+            });
+
+            
+        });
+    </script>
+</body>
+</html>

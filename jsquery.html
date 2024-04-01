@@ -1,0 +1,107 @@
+<!-- jsquery is sorted form of javascript,reduce server load -->
+<!-- SYNTAX> $(selector).action() -->
+<!-- $ is use foor accessing jquery -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>ANKIT CHAUBEY</h1>
+  <script type="text/javascript" language="javascript" >
+    $(document).ready(function(){
+        $("h1").css("font-size","70px");
+        $("h1").css("color","red");
+        $("h1").css("margin","200px");
+
+    });
+  </script>
+</body>
+</html>  -->
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+  
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("h1").text("LOVELY PROFESSIONAL UNIVERSITY");
+            });
+            $("#b2").click(function(){
+                $("h2").html("<i>INDIA</i>");
+            });
+            $("#b1").mouseenter(function(){
+                $("h1").css("color", "blue");
+            });
+            // Function to handle mouse leave event
+            $("#b1").mouseleave(function(){
+                $("h1").css("color", "green");
+            });
+            $("#b3").click(function(){
+                $("h3").html("<img src='https://images.shiksha.com/mediadata/images/1604303476phpxusQ3D.jpeg' alt='Lovely Professional University'>");
+            });
+            $("#b2").mouseenter(function(){
+                $("h2").css("color", "red");
+            });
+            // Function to handle mouse leave event
+            $("#b2").mouseleave(function(){
+                $("h2").css("color", "black");
+            });
+        });
+    </script>
+    
+  </head>
+<body>
+<h1>????? ????? ?????</h1>
+<h2>@@@@@@</h2>
+<h3>%%%%%%%</h3>
+
+<button id="b1">TEXT</button>
+
+<button id="b2">HTML</button>
+
+<button id="b3">HTML</button>
+</body>
+</html>
+
+
+
+  -->
+
+
+  <!-- HIDE AND SHOW FUNCTION USING JQUERY -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+          $(document).ready(function(){
+              $("#hiddenbutton").click(function(){
+                  $("#elementtohide").hide();
+              })
+          })
+      </script>
+  </head>
+  <body>
+      <div id="elementtohide">
+          this is the element to hide.
+      </div>
+      <button id="hiddenbutton">CLICK ME!</button>
+  </body>
+  </html>

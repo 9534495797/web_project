@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .imgStyle{
+        width: 100px;
+        height: 100px;
+        border: 3px solid grey;
+    }
+    #mainImage {
+            border: 3px solid grey;
+        }
+       
+
+</style>
+<body>
+    <img id="mainImage" style="border:3px solid grey" src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="500px" width="540px"><br>
+    <div id="divid" onclick="changeImageOnClick()" onmouseover="f1()" onmouseout="f2()" onclick="changeBorderColor()">
+        <img id="2" class="imgStyle" src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <img id="3" class="imgStyle" src="https://images.pexels.com/photos/65894/peacock-pen-alluring-yet-lure-65894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <img id="4" class="imgStyle" src="https://images.pexels.com/photos/15239/flower-roses-red-roses-bloom.jpg?auto=compress&cs=tinysrgb&w=600">
+        <img id="5" class="imgStyle" src="https://images.pexels.com/photos/1433052/pexels-photo-1433052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <img id="6" class="imgStyle" src="https://images.pexels.com/photos/1563355/pexels-photo-1563355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    </div>
+    <script>
+        function changeImageOnClick() {
+            const mainImage = document.getElementById("mainImage");
+            mainImage.src = event.target.src;
+          
+
+        }
+
+        function f1() {
+            const mainImage = document.getElementById("mainImage");
+    
+
+        }
+
+        function f2() {
+            const mainImage = document.getElementById("mainImage");
+            
+        }
+        function changeBorderColor(img) {
+            // Toggle border color on click
+            img.style.borderColor = img.style.borderColor === "red" ? "grey" : "red";
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .imgStyle{
+        width: 100px;
+        height: 100px;
+        border: 3px solid grey;
+    }
+    #mainImage {
+            border: 3px solid grey;
+        }
+       
+
+</style>
+<body>
+    <img id="mainImage" style="border:3px solid grey" src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" height="500px" width="540px"><br>
+    <div id="divid" onclick="changeImageOnClick(event)" onmouseover="f1()" onmouseout="f2()">
+        <img id="2" class="imgStyle" src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <img id="3" class="imgStyle" src="https://images.pexels.com/photos/65894/peacock-pen-alluring-yet-lure-65894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <img id="4" class="imgStyle" src="https://images.pexels.com/photos/15239/flower-roses-red-roses-bloom.jpg?auto=compress&cs=tinysrgb&w=600">
+        <img id="5" class="imgStyle" src="https://images.pexels.com/photos/1433052/pexels-photo-1433052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+        <img id="6" class="imgStyle" src="https://images.pexels.com/photos/1563355/pexels-photo-1563355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+    </div>
+    <script>
+        function changeImageOnClick(event) {
+            const mainImage = document.getElementById("mainImage");
+            mainImage.src = event.target.src;
+            // Remove border from all images
+            const images = document.querySelectorAll('.imgStyle');
+            images.forEach(img => img.style.borderColor = "grey");
+            // Add border to the clicked image
+            event.target.style.borderColor = "red";
+        }
+
+        function f1() {
+            const mainImage = document.getElementById("mainImage");
+    
+
+        }
+
+        function f2() {
+            const mainImage = document.getElementById("mainImage");
+            
+        }
+    </script>
+</body>
+</html>

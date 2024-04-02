@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hiddenbutton").click(function(){
+                $("#elementtohide").hide();
+            })
+$("#showbutton").click(function(){
+    $("#elementtohide").show();
+})
+$("#hiddenbutton").mouseenter(function(){
+                $("#hiddenbutton").css("color", "blue");
+            });
+            // Function to handle mouse leave event
+            $("#hiddenbutton").mouseleave(function(){
+                $("#hiddenbutton").css("color", "green");
+            });
+            $("#showbutton").mouseenter(function(){
+                $("#showbutton").css("color", "blue");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="elementtohide">
+        <img  height="500px" width="2200px" src="https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg">
+
+    </div>
+    <button id="hiddenbutton">HIDE ME!</button>
+    <button id="showbutton">SHOW ME!</button>
+
+</body>
+</html>

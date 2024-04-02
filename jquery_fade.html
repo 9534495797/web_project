@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fadeinbutton").click(function(){
+                $("#slideelement").fadeIn();
+            })
+            $("#fadeoutbutton").click(function(){
+                $("#slideelement").fadeOut();
+            })
+            $("#fadetogglebutton").click(function(){
+                $("#slideelement").fadeToggle();
+            })
+            $("#fadetobutton").click(function(){
+                $("#slideelement").fadeTo(1000,0.5);
+            })
+            $("#fadetooriginal").click(function(){
+                $("#slideelement").fadeTo(1000,1);
+            })
+            
+        })
+    </script>
+</head>
+<body>
+    <div id="slideelement">
+        <img  height="500px" width="2200px" src="https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg">
+
+    </div>
+    <button id="fadeinbutton">fade in</button>
+    <button id="fadeoutbutton">fade out</button>
+    <button id="fadetogglebutton">fade toggle</button>
+    <button id="fadetobutton">fade to</button>
+    <button id="fadetooriginal">fade to original</button>
+</body>
+</html>
